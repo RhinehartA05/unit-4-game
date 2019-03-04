@@ -35,22 +35,27 @@ var slot3 = "defender" //The players selected opponent
 
 $(document).ready(function(){
     
-
-
-
-
-
-
-
-
-
-  });
-
-
-
-
-
-
-  $("#para").click(function(){
+    $(".photo1").click(function(){
     $(this).hide();
+    }); 
+
+
+
+
+
+
+
+
   });
+
+
+
+
+
+
+
+//COPY AND PASTE CODE TO SAVE.......
+
+
+
+  
