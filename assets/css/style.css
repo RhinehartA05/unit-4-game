@@ -1,18 +1,14 @@
-
-#gem {
-    margin-right: 32px;
+.title {
+    padding: 0;
 }
 
 
-.container {
-    border: 1px solid blue;
+.gem {
+    margin-right: px;
 }
-
-
 
 .jumbotron {
     padding: 10px;
-
 }
 
 

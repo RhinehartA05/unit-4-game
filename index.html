@@ -11,18 +11,18 @@
         
 
         
-        <title>Romancing the Stones</title>
+        <title>Offer you can't refuse</title>
     </head>
     <body>
         <div class="wrapper">
             <div class="container">
                 <div class="title col-lg-12">
-                    <h1>Romancing the Stones</h1>
+                    <h1>Offer you can't refuse</h1>
                 </div>
                 <div class="jumbotron instructions col-lg-12">
                     <h2>Instructions</h2>
-                    <p>Each jewel here has a price value.</p>
-                    <p>Steal jewels to equal the the amount needed.</p>
+                    <p>$$ Each jewel has a hidden random price value. $$</p>
+                    <p>Click on a jewel to steal it. Keep stealing jewels to equal the the amount needed from the mob boss.</p>
                     <p>Steal the wrong amount and you'll get caught!</p>
                 </div>
                 <hr>
@@ -33,40 +33,37 @@
                     </div>
                         
                     <div class="new-job col-lg-3">
-                        <a href="#" class="btn btn-secondary">New Job</a>
+                        <button id="new-job" class="btn btn-secondary">Fresh Start</button>
                     </div>    
 
                     <div class="robber card col-lg-3">
                         <img src="assets/images/crime-robber.jpg" class="card-img-top" alt="...">
-                        <h5 class="card-title">Retrieved: $<span id="loot"></span>.00</h5>
+                        <h5 class="card-title">Retrieved: $<span id="loot"></span>.00 worth.</h5>
+                        <h5 class="card-title">Charge: <span id="charge"></span></h5>
                     </div>
                     <div class="new-job col-lg-3">
-                        <h6> Wins: <span id="wins"></span></h6>
-                        <h6>Losses: <span id="losses"></span></h6>
+                        <h6>Ata'Boy: <span id="wins"></span></h6>
+                        <h6>Caught: <span id="losses"></span></h6>
                     </div>    
                 </div>
 
                 <hr>
 
                 <div class="row">
-                    <div id="gem" class="jewel card col-lg-2">
-                        <img src="assets/images/blue-jewel-square.png" class="card-img-top" alt="Blue Jewel">
-                        <h5 class="value"><span>value</span></h5>
+                    <div class="jewel card col-lg-2">
+                        <img id="gem" src="assets/images/blue-jewel-square.png" class="loot card-img-top" alt="Blue Jewel">
                     </div>
                     
-                    <div id="gem" class="jewel card col-lg-2">
-                        <img src="assets/images/red-jewel-square.png" class="card-img-top" alt="Red Jewel">
-                        <h5 class="value"><span>value</span></h5>
+                    <div class="jewel card col-lg-2">
+                        <img id="gem" src="assets/images/red-jewel-square.png" class="loot card-img-top" alt="Red Jewel">
                     </div>
                     
-                    <div id="gem" class="jewel card col-lg-2">
-                        <img src="assets/images/green-jewel-square.png" class="card-img-top" alt="Green Jewel">
-                        <h5 class="value"><span>value</span></h5>
+                    <div class="jewel card col-lg-2">
+                        <img id="gem" src="assets/images/green-jewel-square.png" class="loot card-img-top" alt="Green Jewel">
                     </div>
                     
-                    <div id="gem" class="jewel card col-lg-2">
-                        <img src="assets/images/purple-jewel-square.png" class="card-img-top" alt="Purple Jewel">
-                        <h5 class="value"><span>value</span></h5>
+                    <div class="jewel card col-lg-2">
+                        <img id="gem" src="assets/images/purple-jewel-square.png" class="loot card-img-top" alt="Purple Jewel">
                     </div>
 
 
