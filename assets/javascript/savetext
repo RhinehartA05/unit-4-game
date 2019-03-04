@@ -1,0 +1,431 @@
+//Previous JS
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">        
+        <link rel="stylesheet" href="assets/css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="assets/javascript/game.js"></script>
+        
+
+        
+        <title>Star Wars: The RPG</title>
+    </head>
+    <body>
+        
+        <div class="wrapper">
+
+            <div class="container">
+                <div class="col-lg-12"><h1>STAR WARS: THE RPG</h1></div>
+                <button id="attackBtn" class="btn btn-secondary col-lg-3">Music1</button>
+                <button id="attackBtn" class="btn btn-secondary col-lg-3">Music2</button>
+                <button id="attackBtn" class="btn btn-secondary col-lg-3">Music3</button>
+                
+                <div class="col-lg-12 col"><h2>Choose your fighter!</h2></div>
+
+                <hr>
+
+                <div class="select-screen">
+                    <div class="row">
+                        <img id="obiWan-combatant" class="selected-fighter" src="./assets/images/ObiWan Square.jpg" alt="ObiWan">
+                        <img id="luke-combatant" class="selected-fighter" src="./assets/images/Luke Square.jpg" alt="Luke">
+                        <img id="sidious-combatant" class="selected-fighter" src="./assets/images/Sidious Square.jpg" alt="Sidious">
+                        <img id="maul-combatant" class="selected-fighter" src="./assets/images/Darth Maul Square.jpg" alt="Maul">
+                    
+                        <!-- These are hidden images -->
+                        <img id="obiWan-selected" class="attack-photo" src="./assets/images/Obiwan Selected Square.jpg" alt="ObiWan">
+                        <img id="luke-selected" class="attack-photo" src="./assets/images/Luke Selected Square.jpg" alt="Luke">
+                        <img id="sidious-selected" class="attack-photo" src="./assets/images/Sidious Selected Square.jpg" alt="Sidious">
+                        <img id="maul-selected" class="attack-photo" src="./assets/images/Maul Selected Square.jpg" alt="Maul">
+                </div>
+
+                <hr>
+                
+                <div class="fight-screen">
+                    <div class="row">
+                        <div id="player-selected" class="col-lg-6">player selected</div>
+                        <div id="opponent-selected" class="col-lg-6">opponent selected</div>
+                    </div>
+                </div>
+
+                
+                     
+                <hr>
+
+                <div class="attack-screen">
+                    <div class="jumbotron col-lg-9">
+                        <p>Player Attack</p>
+                        <p>Opponent Attack</p>
+                        
+                    </div>
+                </div>
+                
+                <div>
+                    <button id="attackBtn" class="btn btn-danger">Attack!</button>
+                </div>
+            </div>
+
+            
+
+
+        </div>
+
+
+
+        
+        
+        
+        
+
+
+
+
+
+
+        
+    </body>
+
+    
+</html>
+
+
+
+
+
+
+
+
+
+-------------------------------------
+
+$(document).ready(function(){
+
+//Select Screen into variables
+var obiWanCombatant = $('#obiWan-combatant');
+var lukeCombatant = $('#luke-combatant');
+var sidiousCombatant = $('#sidious-combatant');
+var maulCombatant = $('#maul-combatant');
+
+//Figther Screen into variables
+var obiWanSelected = $('#obiWan-selected');
+var lukeSelected = $('#luke-selected');
+var sidiousSelected = $('#sidious-selected');
+var maulSelected = $('#maul-selected');
+
+//Screen id's into variables
+var playerSelected = '';
+var opponentSelected = '';
+var otherOpponents = '';
+
+//Attack variables
+var playerAttack = 0;
+var opponentAttack = 0;
+var wins = 0;
+var losses = 0;
+
+
+//who are the combatants
+var combatant = {
+    obiWan: {
+        health: 120,
+        value: 25,
+    },
+    luke: {
+        health: 100,
+        value: 25,
+    },
+    sidious: {
+        health: 150,
+        value: 25,
+    },
+    maul: {
+        health: 180,
+        value: 25,
+    }
+};
+
+
+
+
+//attack function
+var attackBtn = $('#attackBtn');
+
+// $(".fighter").click(function(){
+//     $(this).hide();
+//     $(".photo2").show();
+//     });
+
+//selected character is removed from selection screen and selected fighter image appears.
+        $('.selected-fighter').click(function(){
+            $(this).hide();       
+        });
+
+        
+       
+       
+
+
+
+       
+    
+        
+
+
+
+
+
+    
+    // $(".photo1").click(function(){
+    // $(this).hide();
+    // }); 
+
+    // $("#attackBtn").click(function(){
+    //     $(this).hide();
+    //     }); 
+
+
+
+
+
+
+  });
+
+
+
+
+
+
+
+//COPY AND PASTE CODE TO SAVE.......
+
+
+
+  
+
+
+
+
+-----------------------------------
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">        
+        <link rel="stylesheet" href="assets/css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="assets/javascript/game.js"></script>
+        
+
+        
+        <title>Star Wars: The RPG</title>
+    </head>
+    <body>
+        
+        <div class="wrapper">
+
+            <div class="container">
+                <div><h1>STAR WARS: THE RPG</h1></div>
+                <button id="attackBtn" class="btn btn-secondary">Music1</button>
+                <button id="attackBtn" class="btn btn-secondary">Music2</button>
+                <button id="attackBtn" class="btn btn-secondary">Music3</button>
+                <button id="attackBtn" class="btn btn-secondary">Music4</button>
+                
+                <div id="charSelect"><h2>Choose your fighter!</h2></div>
+
+                <hr>
+
+                <div class="selectScreen">
+                    <div class="row">
+                        <img id="obiWan" class="photo1 fighter" src="./assets/images/ObiWan Square.jpg" alt="ObiWan">
+                        <img id="luke" class="photo1 fighter" src="./assets/images/Luke Square.jpg" alt="Luke">
+                        <img id="sidious" class="photo1 fighter" src="./assets/images/Sidious Square.jpg" alt="Sidious">
+                        <img id="maul" class="photo1 fighter" src="./assets/images/Darth Maul Square.jpg" alt="Maul">
+                    </div>
+                </div>
+
+                <hr>
+                
+                <div class="fightScreen">
+                    <div class="row">
+                        <div id="playerSelected" class="col-lg-6"></div>
+                        <div id="opponentSelected" class="col-lg-6"></div>
+                    </div>
+                </div>
+                     
+                <hr>
+
+                <div class="attackScreen">
+                    <div class="jumbotron">
+                        <p>Player Attack</p>
+                        <p>Opponent Attack</p>
+                        
+                    </div>
+                </div>
+                
+                <div>
+                    <button id="attackBtn" class="btn btn-danger">Attack!</button>
+                </div>
+            </div>
+
+            <!-- These are hidden images -->
+            <img id="obiWanSelect" class="photo2 " src="./assets/images/Obiwan Selected Square.jpg" alt="ObiWan">
+            <img id="lukeSelect" class="photo2" src="./assets/images/Luke Selected Square.jpg" alt="Luke">
+            <img id="sidiousSelect" class="photo2" src="./assets/images/Sidious Selected Square.jpg" alt="Sidious">
+            <img id="maulSelect" class="photo2" src="./assets/images/Maul Selected Square.jpg" alt="Maul">
+
+
+        </div>
+
+
+
+        
+        
+        
+        
+
+
+
+
+
+
+        
+    </body>
+
+    
+</html>
+
+
+
+
+
+
+
+
+JAVASCRIPT_____________________________________________________________
+$(document).ready(function(){
+
+var obiWanImg = $('#obiWan');
+var lukeImg = $('#luke');
+var sidiousImg = $('#sidious');
+var maulImg = $('#maul');
+
+var obiWanImgSel = $('#obiWanSelect');
+var lukeImgSel = $('#lukeSelect');
+var sidiousImgSel = $('#sidiousSelect');
+var maulImgSel = $('#maulSelect');
+
+
+//who are the fighters
+var fighters = {
+    obiWan: {
+        health: 120,
+        value: 25,
+    },
+    luke: {
+        health: 100,
+        value: 25,
+    },
+    sidious: {
+        health: 150,
+        value: 25,
+    },
+    maul: {
+        health: 180,
+        value: 25,
+    }
+};
+
+
+//what positions are establish?
+var slot1 = "" //All Characters are here
+var slot2 = "" //Selected Character
+var slot3 = "" //Selected Opponent
+var userAttack = 0;
+var wins = 0;
+var losses = 0;
+
+
+//attack function
+var attackBtn = $('#attackBtn');
+
+// $(".fighter").click(function(){
+//     $(this).hide();
+//     $(".photo2").show();
+//     });
+
+//selected character is removed from selection screen and selected fighter image appears.
+       
+
+
+        $("#obiWan").click(function(){
+        $(this).hide();
+        $("#obiWanSelect").show();
+        $("#playerSelected").append(obiWanImgSel);
+        $("#playerSelected").append(fighters.obiWan.health);
+        });
+
+        $("#luke").click(function(){
+        $(this).hide();
+        $("#lukeSelect").show();
+        $("#playerSelected").append(lukeImgSel);
+        $("#playerSelected").append(fighters.luke.health);
+        });
+    
+        $("#sidious").click(function(){
+        $(this).hide();
+        $("#sidiousSelect").show();
+        $("#playerSelected").append(sidiousImgSel);
+        $("#playerSelected").append(fighters.sidious.health);
+        });
+    
+    
+        $("#maul").click(function(){
+        $(this).hide();
+        $("#maulSelect").show();
+        $("#playerSelected").append(maulImgSel);
+        $("#playerSelected").append(fighters.maul.health);
+        });
+    
+        
+
+
+
+
+
+    
+    // $(".photo1").click(function(){
+    // $(this).hide();
+    // }); 
+
+    // $("#attackBtn").click(function(){
+    //     $(this).hide();
+    //     }); 
+
+
+
+
+
+
+  });
+
+
+
+
+
+
+
+//COPY AND PASTE CODE TO SAVE.......
+
+
+
+  
