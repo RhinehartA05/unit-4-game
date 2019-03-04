@@ -1,14 +1,19 @@
+
+#gem {
+    margin-right: 32px;
+}
+
+
 .container {
     border: 1px solid blue;
 }
 
-.card-img-top {
-    width: 50%;
-    height: 80%;
-    
-}
+
 
 .jumbotron {
     padding: 10px;
 
 }
+
+
+
