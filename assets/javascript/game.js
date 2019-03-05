@@ -24,39 +24,48 @@ console.log(counter + " counter");
 //THIS CODE BELOW NOT WORKING...
 //creates a random number for 4 different values
 for(var i = 0; i < 4; i++){
-    var randomValue = Math.floor(Math.random() * 20) + 2; //creates a random number every time it's ran
+    var randomValue = Math.floor(Math.random() * 13) + 2; //creates a random number every time it's ran
     console.log(randomValue + " randomValue");
-    var jewel = $('#gem'); //variable jewel is "id gem" there are four gems
-    jewel.attr("data-gemValue", numberOptions[i]); //vartiable attribute should be data-gemValue
+    var jewel = $('#gem'+ i); //variable jewel is "id gem" there are four gems
+    jewel.attr("data-gemValue", randomValue); //vartiable attribute should be data-gemValue
     console.log(jewel + " jewel");
 };
 
 //clicking should give each gem a random value which will increase counter
-$("#gem").on("click", function() {
-    ($(this).attr("data-gemValue"));
+$(".loot").on("click", function() {
+   var gemValue = $(this).attr("data-gemValue");
     gemValue = parseInt(gemValue);
     counter += gemValue;
     console.log(gemValue + " gemvalue");
-});
 
-//determines if player has won or lost
-if (counter === targetNumber) {
-    counter++
-    $("#wins").text(wins);
-  }
-  else if (counter >= targetNumber) {
-    losses++
-    $("#losses").text(losses);
-}
+    $("#loot").text(counter);
+    console.log(counter + " counter");
 
-//charge based on amount stolen  
-  if (counter >= 60) {
-    $("#charge").text('Felony');
-} if (counter <= 60) {
-    $("#charge").text('Misdemeanor');
-} if (counter === 0) {
-    $("#charge").text('');
-}
+    //determines if player has won or lost
+    if (counter === targetNumber) {
+        counter++
+        $("#wins").text(wins); //create win text
+    }
+    else if (counter >= targetNumber) {
+        losses++
+        $("#losses").text(losses); //create loss text
+    }
+
+    //charge based on amount stolen  
+    if (counter >= 61) {
+        $("#charge").text('Felony');
+    } if (counter <= 60) {
+        $("#charge").text('Misdemeanor');
+    } if (counter === 0) {
+        $("#charge").text('');
+    }
+    });
+
+
+
+
+
+
 
     
   $("#new-job").on("click", function(){
