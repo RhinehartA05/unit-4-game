@@ -21,15 +21,18 @@ console.log(losses + " losses");
 $("#loot").text(counter);
 console.log(counter + " counter");
 
-//THIS CODE BELOW NOT WORKING...
+
 //creates a random number for 4 different values
-for(var i = 0; i < 4; i++){
+
+    
+    for(var i = 0; i < 4; i++){
     var randomValue = Math.floor(Math.random() * 13) + 2; //creates a random number every time it's ran
     console.log(randomValue + " randomValue");
     var jewel = $('#gem'+ i); //variable jewel is "id gem" there are four gems
     jewel.attr("data-gemValue", randomValue); //vartiable attribute should be data-gemValue
     console.log(jewel + " jewel");
 };
+
 
 //clicking should give each gem a random value which will increase counter
 $(".loot").on("click", function() {
@@ -43,12 +46,14 @@ $(".loot").on("click", function() {
 
     //determines if player has won or lost
     if (counter === targetNumber) {
-        counter++
+        wins++
         $("#wins").text(wins); //create win text
+        job()
     }
-    else if (counter >= targetNumber) {
+    else if (counter > targetNumber) {
         losses++
         $("#losses").text(losses); //create loss text
+        
     }
 
     //charge based on amount stolen  
